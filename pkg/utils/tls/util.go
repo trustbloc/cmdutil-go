@@ -11,13 +11,11 @@ import (
 	"fmt"
 	"os"
 	"path"
-
-	commontls "github.com/trustbloc/cmdutil-go/pkg/tls"
 )
 
 // GetCertPool get cert pool.
 func GetCertPool(useSystemCertPool bool, tlsCACerts []string) (*x509.CertPool, error) {
-	certPool, err := commontls.NewCertPool(useSystemCertPool)
+	certPool, err := NewCertPool(useSystemCertPool)
 	if err != nil {
 		return nil, fmt.Errorf("failed to create new cert pool: %w", err)
 	}
