@@ -1,3 +1,7 @@
+// Copyright SecureKey Technologies Inc. All Rights Reserved.
+//
+// SPDX-License-Identifier: Apache-2.0
+
 module github.com/trustbloc/cmdutil-go
 
 go 1.19
@@ -5,7 +9,7 @@ go 1.19
 require (
 	github.com/spf13/cobra v1.6.1
 	github.com/stretchr/testify v1.8.1
-	github.com/trustbloc/logutil-go v0.0.0-20221107142326-c9110e31ee60
+	github.com/trustbloc/logutil-go v0.0.0-20221124174025-c46110e3ea42
 )
 
 require (
