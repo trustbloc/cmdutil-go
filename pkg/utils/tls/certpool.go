@@ -11,6 +11,8 @@ import (
 	"sync/atomic"
 
 	"github.com/trustbloc/logutil-go/pkg/log"
+
+	"github.com/trustbloc/cmdutil-go/internal/logfields"
 )
 
 var logger = log.New("cmdutil-go-tls")
@@ -158,7 +160,7 @@ func loadSystemCertPool(useSystemCertPool bool) (*x509.CertPool, error) {
 	}
 
 	//nolint:staticcheck
-	logger.Debug("Loaded system cert pool of size", log.WithCertPoolSize(len(systemCertPool.Subjects())))
+	logger.Debug("Loaded system cert pool of size", logfields.WithCertPoolSize(len(systemCertPool.Subjects())))
 
 	return systemCertPool, nil
 }
